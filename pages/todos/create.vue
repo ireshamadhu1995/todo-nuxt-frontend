@@ -179,7 +179,7 @@ name: 'todosCreate',
     this.loading = true;
 
     const response = await axios.post(
-    `${this.$config.public.baseURL}`,
+    `${this.$config.public.baseURL}/todos`,
           {
             title: this.createForm.title,
             description: this.createForm.amount,

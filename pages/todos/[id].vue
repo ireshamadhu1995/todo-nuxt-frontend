@@ -191,7 +191,7 @@ name: 'students-update',
 
    async getTodoData(id){
        const response = await axios.get(
-          `${this.$config.public.baseURL}/${id}`,
+          `${this.$config.public.baseURL}/todos/${id}`,
           {
               headers: {
                 "Content-Type": "application/json",
@@ -212,7 +212,7 @@ name: 'students-update',
     this.loading = true;
 
     const response = await axios.put(
-      `http://localhost:8060/todos/${this.todoId}`,
+      `${this.$config.public.baseURL}/todos/${this.todoId}`,
       {
         title: this.editForm.title,
         description: this.editForm.description,

@@ -229,7 +229,7 @@ export default {
 
 async deleteTodo(id) {
   try {
-    const res = await axios.delete(`${this.$config.public.baseURL}/${id}`, {
+    const res = await axios.delete(`${this.$config.public.baseURL}/todos/${id}`, {
       headers: {
         "Content-Type": "application/json",
       },

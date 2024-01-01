@@ -163,7 +163,7 @@ name: 'todosCreate',
       createForm: {
         title: null,
         description: null,
-        status: null,
+        status: "TODO",
         priority: null,
       },
     };

@@ -14,7 +14,8 @@
           </v-icon>
         </v-col>
         <v-col cols="9" class="mt-10">
-          <h1>Update Todo</h1>
+          <h1 v-if="this.mode == 'view'">View Todo</h1>
+           <h1 v-else>Update Todo</h1>
           <p>Manage Task List</p>
         </v-col>
         <v-spacer></v-spacer>

@@ -65,7 +65,7 @@
       </v-card>
       <v-data-table :headers="headers" :items="todos" :search="search">
         <template #item="{ item }">
-          <tr>
+          <tr :class="getRowColorClass(item.status)">
             <td>{{ item.title }}</td>
              <td>
           <div class="description-cell" :title="item.description">
@@ -222,6 +222,15 @@ export default {
     },
   },
   methods: {
+     getRowColorClass(status) {
+      if (status === 'COMPLETED') {
+        return 'completed-row';
+      } else if (status === 'IN-PROGRESS') {
+        return 'in-progress-row';
+      } else {
+        return 'pending-row';
+      }
+    },
     remove(code) {
       this.deleteItem.code = code;
       this.deleteDialog = true;
@@ -285,10 +294,21 @@ async deleteTodo(id) {
     background-color: transparent !important;
 }
 .description-cell {
-  max-width: 150px; /* Adjust as needed */
+  max-width: 150px; 
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   cursor: pointer;
+}
+.completed-row {
+  background-color: #d4edda; 
+}
+
+.in-progress-row {
+  background-color: #9ed6ac; 
+}
+
+.pending-row {
+  background-color: #f8d7da; 
 }
 </style>

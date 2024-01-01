@@ -182,7 +182,7 @@ name: 'todosCreate',
     `${this.$config.public.baseURL}/todos`,
           {
             title: this.createForm.title,
-            description: this.createForm.amount,
+            description: this.createForm.description,
             priority: this.createForm.priority,
             status: this.createForm.status,
           },

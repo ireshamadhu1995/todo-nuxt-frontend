@@ -7,6 +7,8 @@ Nuxt3 frontend service for the todo application
 
 `npm install`
 
+rename `sample-env` into `.env`
+
 `npm run dev`
 
 open `http://localhost:3000` from the browser
